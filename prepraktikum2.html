@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inputBil" placeholder="Input Bilangan">
+    <button type="submit" id="cek" onclick="bilPrima()">Cek</button>
+    <br>
+    <p id="tampil"></p>
+    <script>
+      // var bilangan = prompt("Masukkan angka ");
+      function bilPrima() {
+        var bilangan = document.getElementById("inputBil").value;
+        for (i = 2; i < (bilangan); i++) {
+          if (bilangan % i == 0) {
+            prima=0;
+            break;
+          }else {
+            prima=1;
+          } 
+        }
+        if (prima) {
+          document.getElementById("tampil").innerHTML = "Bilangan prima"
+        } else {
+          document.getElementById("tampil").innerHTML = "Bukan bilangan prima !!!"
+        }
+      }
+    </script>
+  </body>  
+</html>
